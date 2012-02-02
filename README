@@ -1,1 +1,15 @@
-This file was created by JetBrains PhpStorm 3.0 for binding GitHub repository
+Fixing duplicated links to the home page in OpenCart.
+
+Installation:
+1) Get latest version from GitHub Repository
+2) Move extracted file into the folder: /vqmod/xml/
+3) Enjoy!
+
+Project page:
+https://github.com/shaman/opencart-seo-homelink-fix
+
+Bug reports:
+https://github.com/shaman/opencart-seo-homelink-fix/issues
+
+Ukrainian community support:
+http://forum.opencart.ua/viewtopic.php?f=5&t=114
