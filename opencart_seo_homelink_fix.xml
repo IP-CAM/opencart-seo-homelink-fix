@@ -1,45 +1,22 @@
 <modification>
     <id>OpenCart SEO Homelink Fix</id>
     <version>1.4.x/1.5.x</version>
-    <vqmver>1.2</vqmver>
+    <vqmver>1.3</vqmver>
     <author>Eugene Kuligin (OpenCart Ukrainian Team)</author>
     <file name="system/library/url.php">
         <operation>
             <search position="replace">
-                <![CDATA[return $this->rewrite($url);]]>
+                <![CDATA[return $url;]]>
             </search>
             <add>
                 <![CDATA[
                     if ($route == 'common/home' && empty($args)) {
                         return false;
                     } else {
-                        return $this->rewrite($url);
+                        return $url;
                     }
                 ]]>
             </add>
         </operation>
     </file>
-    <file name="catalog/controller/common/header.php">
-        <operation>
-            <search position="replace">
-                <![CDATA[$this->data['redirect'] = $this->url->link('common/home');]]>
-            </search>
-            <add>
-                <![CDATA[
-                    $this->data['redirect'] = $this->data['base'];
-                ]]>
-            </add>
-        </operation>
-        <operation>
-            <search position="replace">
-                <![CDATA[$this->data['action'] = $this->url->link('common/home');]]>
-            </search>
-            <add>
-                <![CDATA[
-                    $this->data['action'] = $this->data['base'];
-                ]]>
-            </add>
-        </operation>
-    </file>
 </modification>
-
